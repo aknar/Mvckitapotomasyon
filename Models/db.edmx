@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kutuphaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="emanet_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="isbnno" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kitapad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yazar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tarih" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tc" Type="nvarchar" MaxLength="50" />
+          <Property Name="durum" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kitap_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="yazar" Type="nvarchar" MaxLength="50" />
+          <Property Name="sayfasayisi" Type="int" />
+          <Property Name="yayinevi" Type="nvarchar" MaxLength="50" />
+          <Property Name="basimyili" Type="datetime" />
+          <Property Name="kategori" Type="nvarchar" MaxLength="50" />
+          <Property Name="isbnno" Type="nvarchar" MaxLength="50" />
+          <Property Name="aciklama" Type="nvarchar" MaxLength="100" />
+          <Property Name="durum" Type="nvarchar" MaxLength="50" />
+          <Property Name="basim_yili" Type="nchar" MaxLength="25" />
+          <Property Name="kayit_tarih" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="okur_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="11" />
+          <Property Name="adres" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="tc" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="cinsiyet" Type="nvarchar" MaxLength="10" />
+          <Property Name="durum" Type="nvarchar" MaxLength="50" />
+          <Property Name="tarih" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="kutuphaneModelStoreContainer">
+          <EntitySet Name="admin_tbl" EntityType="Self.admin_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="emanet_tbl" EntityType="Self.emanet_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kitap_tbl" EntityType="Self.kitap_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="okur_tbl" EntityType="Self.okur_tbl" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kutuphaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admin_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="emanet_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="isbnno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="kitapad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yazar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kitap_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="yazar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sayfasayisi" Type="Int32" />
+          <Property Name="yayinevi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="basimyili" Type="DateTime" Precision="3" />
+          <Property Name="kategori" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isbnno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="basim_yili" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+          <Property Name="kayit_tarih" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="okur_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="telefon" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="kutuphaneEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admin_tbl" EntityType="Self.admin_tbl" />
+          <EntitySet Name="emanet_tbl" EntityType="Self.emanet_tbl" />
+          <EntitySet Name="kitap_tbl" EntityType="Self.kitap_tbl" />
+          <EntitySet Name="okur_tbl" EntityType="Self.okur_tbl" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kutuphaneModelStoreContainer" CdmEntityContainer="kutuphaneEntities3">
+          <EntitySetMapping Name="admin_tbl">
+            <EntityTypeMapping TypeName="kutuphaneModel.admin_tbl">
+              <MappingFragment StoreEntitySet="admin_tbl">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="emanet_tbl">
+            <EntityTypeMapping TypeName="kutuphaneModel.emanet_tbl">
+              <MappingFragment StoreEntitySet="emanet_tbl">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="isbnno" ColumnName="isbnno" />
+                <ScalarProperty Name="kitapad" ColumnName="kitapad" />
+                <ScalarProperty Name="yazar" ColumnName="yazar" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+                <ScalarProperty Name="tc" ColumnName="tc" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kitap_tbl">
+            <EntityTypeMapping TypeName="kutuphaneModel.kitap_tbl">
+              <MappingFragment StoreEntitySet="kitap_tbl">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="yazar" ColumnName="yazar" />
+                <ScalarProperty Name="sayfasayisi" ColumnName="sayfasayisi" />
+                <ScalarProperty Name="yayinevi" ColumnName="yayinevi" />
+                <ScalarProperty Name="basimyili" ColumnName="basimyili" />
+                <ScalarProperty Name="kategori" ColumnName="kategori" />
+                <ScalarProperty Name="isbnno" ColumnName="isbnno" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+                <ScalarProperty Name="basim_yili" ColumnName="basim_yili" />
+                <ScalarProperty Name="kayit_tarih" ColumnName="kayit_tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="okur_tbl">
+            <EntityTypeMapping TypeName="kutuphaneModel.okur_tbl">
+              <MappingFragment StoreEntitySet="okur_tbl">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="tc" ColumnName="tc" />
+                <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

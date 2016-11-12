@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kutuphaneModelStoreContainer" CdmEntityContainer="kutuphaneEntities3">
+    <EntitySetMapping Name="admin_tbl">
+      <EntityTypeMapping TypeName="kutuphaneModel.admin_tbl">
+        <MappingFragment StoreEntitySet="admin_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emanet_tbl">
+      <EntityTypeMapping TypeName="kutuphaneModel.emanet_tbl">
+        <MappingFragment StoreEntitySet="emanet_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="isbnno" ColumnName="isbnno" />
+          <ScalarProperty Name="kitapad" ColumnName="kitapad" />
+          <ScalarProperty Name="yazar" ColumnName="yazar" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kitap_tbl">
+      <EntityTypeMapping TypeName="kutuphaneModel.kitap_tbl">
+        <MappingFragment StoreEntitySet="kitap_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="yazar" ColumnName="yazar" />
+          <ScalarProperty Name="sayfasayisi" ColumnName="sayfasayisi" />
+          <ScalarProperty Name="yayinevi" ColumnName="yayinevi" />
+          <ScalarProperty Name="basimyili" ColumnName="basimyili" />
+          <ScalarProperty Name="kategori" ColumnName="kategori" />
+          <ScalarProperty Name="isbnno" ColumnName="isbnno" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="basim_yili" ColumnName="basim_yili" />
+          <ScalarProperty Name="kayit_tarih" ColumnName="kayit_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="okur_tbl">
+      <EntityTypeMapping TypeName="kutuphaneModel.okur_tbl">
+        <MappingFragment StoreEntitySet="okur_tbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
